@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão Geral</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      
+    <div>
+        <h1>Atividade: Revisão Geral</h1>
+        <h2>Cascata, Especifidade e Combinadores</h2>
+        <nav>
+            <ul>
+                <li><a href="#Cascata">Cascata</a></li>
+                <li><a href="#Especificidade">Especificidade</a></li>
+                <li><a href="#Combinação-de-seletores">Combinação de seletores</a></li>
+                <li><a href="#Pseudo-classes">Pseudo-classes</a></li>
+                <li><a href=" #Display-inline-block">Diferença entre display inline e display block</a></li>
+                <li><a href="#inline-block">Elementos padrão inline e block</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="primeira">
+            <h1>Cascata, Especifidade e Combinadores</h1>
+            <h1>Cascata, Especifidade e Combinadores</h1>
+            <h1>Cascata, Especifidade e Combinadores</h1>
+        </div>
+        <section id="Cascata">
+        <div>
+            <h2>Cascata</h2>
+            <h3>Como funciona a regra da cascata no CSS? </h3>
+            <p>A cascata define como o navegador escolhe qual estilo aplicar quando existem várias regras para o mesmo elemento.
+                A ordem de prioridade é:</p>
+                <ol>
+                    <li>Importância → Regras !important têm prioridade máxima.</li>
+                    <li>Especificidade → Regras mais específicas substituem as mais genéricas.</li>
+                    <li>Origem → Estilos inline (dentro do HTML) têm prioridade sobre os internos style> e externos arquivos CSS.</li>
+                    <li>Ordem de aparição → Se duas regras tiverem a mesma especificidade, a última lida pelo navegador prevalece.</li>
+                </ol>
+        </div>
+    </section>
+        <hr>
+        <section id="Especificidade">
+        <div>
+            <h2>Especificidade</h2>
+            <h3>O que é especificidade? </h3>
+            <p>Especificidade é um sistema de pontos usado para determinar qual regra CSS tem mais “peso”.</p>
+           <ul>
+            <li> <strong>Seletor por tag (h1, p, div…) </strong>→  <span style="color: red;">especificidade baixa.</span></li>
+            <li> <strong> Seletor por classe (.nome), pseudo-classes (:hover, :first-child…)</strong> → <span style="color: red;">especificidade média.</span></li>
+            <li><strong>Seletor por id (#id)</strong> → <span style="color: red;">especificidade alta.</span></li>
+           </ul>
+        </div>
+        <div id="Exemplo">
+           <h4>Exemplo:</h4>
+           <p>h1 { color: blue; }        /* peso baixo */</p>
+           <p>.titulo { color: green; }  /* peso médio */</p>
+           <p>#principal { color: red; } /* peso alto */</p>
+           <p> <strong>O #principal vence.</strong></p>
+        </div>
+    </section>
+        <hr>
+        <section id="Combinação-de-seletores">
+        <div>
+            <h2>Combinação de seletores</h2>
+            <ul>
+                <li>Descendente (espaço) → .primeiro h1</li>
+                <p>Aplica estilo a qualquer h1 dentro de um elemento com classe .primeiro. </p>
+                <p>.primeiro h1 { color: blue; }</p>
+
+                <li>Filho direto ( > ) → .primeira > h1</li>
+                <p>Aplica estilo apenas ao h1 que é filho imediato de .primeira.</p>
+                <p>.primeira > h1 { color: red; }</p>
+
+                <li>Irmão adjacente ( + ) → .primeira h1 + h1</li>
+                <p>Aplica estilo ao h1 que vem logo depois de outro h1 dentro de .primeira.</p>
+                <p>.primeira h1 + h1 { color: green; }</p>
+            </ul>
+        </div>
+</section>
+
+<section id="Pseudo-classes">
+    <div>
+        <h2>Pseudo-classes</h2>
+        <ul>
+            <li>:first-child → seleciona o primeiro filho de um elemento.</li>
+            <li>:last-child → seleciona o último filho.</li>
+            <li>:nth-child(n) → seleciona o filho na posição n. (Ex: :nth-child(2) = segundo filho).</li>
+            <li>:nth-of-type(n) → parecido, mas conta apenas filhos do mesmo tipo de elemento.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="Display-inline-block">
+    <div>
+        <h2>Diferença entre display inline e display block</h2>
+        <ul>
+            <li> <strong>inline → </strong>ocupa apenas o espaço do conteúdo, não quebra linha. Não aceita width, height, margin-top, margin-bottom.</li>
+            <li> <strong>block → </strong>ocupa toda a largura disponível e sempre quebra a linha. Aceita todas as propriedades de tamanho e espaçamento.</li>
+        </ul>
+        <div id="Exemplo">
+            <h4>Exemplo:</h4>
+            <p>span { display: inline; }  /* padrão */</p>
+            <p>div  { display: block; }   /* padrão */</p>
+        
+         </div>
+    </div>
+</section>
+
+<section id="inline-block">
+    <h2>Elementos padrão inline e block</h2>
+    <ul>
+        <li><strong>Inline: </strong> span, a, img, strong, em, label </li>
+        <li><strong>Block:</strong> div, p, h1-h6, section, article, header, footer.
+        </li>
+    </ul>
+</section>
+
+<section id="Margin-Padding-Border">
+    <h2>Margin, Padding e Border</h2>
+    <ul>
+        <li><strong>margin</strong>→ espaço externo ao redor do elemento.</li>
+        <li><strong>padding</strong>→ espaço interno entre o conteúdo e a borda.</li>
+        <li><strong>border</strong>→ a borda do elemento em si.  </li>
+    </ul>
+        <h3>Shorthand (atalhos):</h3>
+        <ul>
+            <li>1 valor → aplica a todos os lados.</li>
+        </ul>
+        <p>margin: 10px;  /* 10px em todos os lados */</p>
+
+        <ul>
+            <li>2 valores → primeiro valor = vertical (top/bottom), segundo = horizontal (left/right).</li>
+        </ul>
+        <p>margin: 10px 20px;</p>
+
+        <ul>
+            <li>3 valores → topo / laterais / baixo. </li>
+        </ul>
+        <p>margin: 10px 20px 30px;</p>
+
+        <ul>
+            <li>4 valores → topo / direita / baixo / esquerda (sentido horário).</li>
+        </ul>
+        <p>margin: 10px 20px 30px 40px;</p>
+</section>
+
+</main>
+        <nav>
+            <ul>
+                <li><a href="./box.html" target="_blank">Display e Box Model</a></li>
+            </ul>
+        </nav>
+    </body>
+    </html> 
