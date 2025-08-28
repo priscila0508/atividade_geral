@@ -20,13 +20,6 @@ body > div{
     padding: 40px;
     border-radius: 24px;
 }
-
-div img{
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 40px;
-}
-
 h1, h2, h3{
     font-family: 'Lora', serif;
 }
@@ -36,9 +29,12 @@ h1{
     color: #312e2c;
     line-height: 100%;
     margin-bottom: 24px;
+    text-align: center;
 }
-
-p, li, th, td{
+h3{
+    color: #312e2c;
+}
+p, li{
     font-family: 'Outfit', sans-serif;
 }
 
@@ -55,79 +51,22 @@ p{
     border-radius: 12px;
     margin-bottom: 32px;
 }
-
-
-
 li{
     padding-left: 10px; 
     color: #5f564d;
     line-height: 150%;
 }
-
-li + li{
-    margin-top: 8px;
-}
-
 ol,ul{
-    margin-left: 20px;
-}
-
-
-
+    margin-left: 20px;}
 h2{
     font-size: 28px;
     color: #854632;
     line-height: 100%;
-    margin-bottom: 24px;
-}
-
-
-
+    margin-bottom: 24px;}
 hr{
     border: 1px solid #e3ddd7;
-    margin-block: 32px;
-}
-
-
-table{
-    width: 100%;
-}
-th,td{
-    border-bottom: 1px solid #e3ddd7;
-    width: 100%;
-
-}
-tr{
-    display: flex;
-}
-
-th{
-    text-align: left;
-    padding-left: 32px;
-    font-weight: 400;
-    color: #5f564d;
-    line-height: 150%;
-
-}
-
-td{
-    padding-left: 16px;
-    color: #854632;
-    font-weight: 700;
-    line-height: 150%;
-}
-
-tr + tr th,
-tr + tr td{
-    padding-block: 12px;
-}
-
-tr:nth-of-type(1) th,
-tr:nth-of-type(1) td{
-    padding-bottom: 12px;
-}
-
-tr:nth-of-type(4)th,
-tr:nth-of-type(4)td{
-    border: none;
-}
+    margin-block: 32px;}
+    #box{
+        text-align: center;
+        list-style-position: inside;
+    }
